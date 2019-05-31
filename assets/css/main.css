@@ -1,0 +1,13 @@
+/*Fonts*/
+h1{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: 0.5s;
+}

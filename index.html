@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <div class="container">
+    <div class="row">
+       <div class="col-6">
+        <h2 id="titulo-form">Adicionar nova tarefa</h2>
+        <ul id="mensagens-erro"></ul>
+          <form id="form-adiciona">
+            <div class="form-group">
+              <label for="descricao">Tarefa:</label>
+              <input type="text" name="descricao" class="form-control" id="tasks">
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="datatarefa">Data:</label>
+                  <input type="date" name="datatarefa" class="form-control" id="date">
+              </div>
+              <div class="col">
+                  <label for="horario">Horário:</label>
+                  <input type="time" name="horario" class="form-control" id="time">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <label for="duracao">Tempo de Duração:</label>
+                  <input type="text" name="duracao" class="form-control" id="duration" min="0">
+                </div>
+                <div class="col">
+                   <label for="duracao">Lembrete:</label>
+                  <input type="text" name="lembrete" class="form-control" id="reminder" min="0">
+                </div>
+            </div>
+            <br>
+             <button id="adicionar-tarefa" type="button" class="btn btn-primary">Adicionar</button>
+           </form>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h2>Exbir Tarefas</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Tarefa</th>
+              <th>Data</th>
+              <th>Hora</th>
+              <th>Tempo de Duração</th>
+              <th>Lembrete</th>
+              <th>Criado em:</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-tarefa">
+            <tr class="tarefa">
+              <td class="info-descricao">Reunião</td>
+              <td class="info-datatarefa">15.03.2019</td>
+              <td class="info-horario">16:40</td>
+              <td class="info-duracao">10 minutos</td>
+              <td class="info-lembrete">30 minutos</td>
+              <td class="info-criacao">16.03.2019</td>
+              <td><button id="remover" type="button" class="btn btn-danger">Remover</button></td>
+            </tr>
+          </tbody>  
+        </table>
+      </div>
+  </div>
+</div>
+    
+   <script src="assets/js/form.js"></script>
+   <script src="assets/js/ajax.js"></script>
+   <script src="assets/js/remover-tarefa.js"></script>
+
+</body>
+</html>
